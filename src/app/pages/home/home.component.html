@@ -1,0 +1,37 @@
+<dx-data-grid
+  [dataSource]="tableData"
+  [showBorders]="true"
+  [remoteOperations]="true"
+  [rowAlternationEnabled]="true"
+  [columnAutoWidth]="true"
+  width="100%"
+>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-paging [pageSize]="13"></dxo-paging>
+
+  <ng-container *ngFor="let column of columns">
+    <dxi-column
+      [dataField]="column.dataField"
+      [caption]="column.caption"
+    >
+    </dxi-column>
+  </ng-container>
+
+  <dxi-column [cellTemplate]="'cellTemplate'" width="85"></dxi-column>
+  <div *dxTemplate="let row of 'cellTemplate'">
+    <div class="d-flex items-center justify-content-center">
+      <i
+        class="dx-icon-edit mr-3"
+        style="cursor: pointer; font-size: 18px; color: #337ab7"
+      ></i>
+      <i
+        class="dx-icon-download mr-3"
+        style="cursor: pointer; font-size: 18px; width: 18px; height: 18px; color: #337ab7"
+      ></i>
+      <i
+        class="dx-icon-trash"
+        style="cursor: pointer; font-size: 18px; width: 18px; height: 18px; color: #337ab7"
+      ></i>
+    </div>
+  </div>
+</dx-data-grid>
