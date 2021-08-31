@@ -5,7 +5,7 @@ export class AppInfoService {
   constructor() {}
 
   public get title() {
-    return 'Devextreme Datagrid Bug';
+    return 'Navigation Test';
   }
 
   public get currentYear() {

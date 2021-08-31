@@ -52,7 +52,7 @@ export class SideNavInnerToolbarComponent implements OnInit {
 
     this.menuMode = isLarge ? 'shrink' : 'overlap';
     this.menuRevealMode = isXSmall ? 'slide' : 'expand';
-    this.minMenuSize = isXSmall ? 0 : 60;
+    this.minMenuSize = 0;
     this.shaderEnabled = !isLarge;
   }
 
